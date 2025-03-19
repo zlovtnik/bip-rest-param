@@ -27,11 +27,15 @@ defmodule XmlEtl.Config do
     password = Keyword.get(opts, :password, System.get_env("API_PASSWORD", "admin"))
     file = Keyword.get(opts, :file, System.get_env("DEFAULT_XML_FILE"))
 
+    connection_name =
+      Keyword.get(opts, :connection_name, System.get_env("CONNECTION_NAME", "brahhh"))
+
     %{
       url: url,
       username: username,
       password: password,
-      file: file
+      file: file,
+      connection_name: connection_name
     }
   end
 

@@ -15,16 +15,17 @@ defmodule XmlEtl.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :soap]
     ]
   end
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:httpoison, "~> 2.0"},
+      {:httpoison, "~> 1.3"},
       {:jason, "~> 1.4"},
-      {:dotenv, "~> 3.0.0"}
+      {:dotenv, "~> 3.0.0"},
+      {:soap, "~> 0.1.2"}
     ]
   end
 
